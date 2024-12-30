@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04 # Runs in GitHub's Linux-based virtual environment
     steps:
       # Step 1: Checkout the repository
       - name: Checkout Repository
@@ -19,7 +19,7 @@ jobs:
         uses: Platane/snk@v2
         with:
           github_user_name: armanans1218
-          outputs: dist/snake.svg
+          outputs: dist
 
       # Step 3: Push the Snake SVG to a new branch
       - name: Push Snake Animation to GitHub
